@@ -1,0 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f4f4f9;
+    color: #333;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Contenedor general */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Estilo para los títulos */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #0361AE;
+    /* Azul principal */
+}
+
+/* Navbar */
+.navbar {
+    background-color: #0361AE;
+    padding: 10px;
+}
+
+.navbar a {
+    color: #FFFFFF;
+    text-decoration: none;
+    padding: 10px;
+    margin: 0 5px;
+}
+
+.navbar a:hover {
+    background-color: #FED000;
+    /* Amarillo principal */
+    color: #0361AE;
+}
+
+/* Botones */
+button {
+    background-color: #0361AE;
+    color: #FFFFFF;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #FED000;
+    color: #0361AE;
+}
+
+/* Tarjetas de producto */
+.product-card {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    background-color: #fff;
+    margin: 10px;
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.product-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.product-card h3 {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+.product-card p {
+    color: #666;
+    margin: 5px 0;
+}
+
+.product-card .price {
+    font-weight: bold;
+    color: #0361AE;
+    margin-top: 10px;
+}
+
+/* Carrito */
+.cart {
+    border: 1px solid #ddd;
+    padding: 15px;
+    background-color: #fff;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.cart-item:last-child {
+    border-bottom: none;
+}
+
+.cart-item h4 {
+    font-size: 1rem;
+}
+
+.cart-item .quantity {
+    color: #0361AE;
+    font-weight: bold;
+}
+
+.cart-total {
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: right;
+    color: #0361AE;
+}
+
+/* Footer */
+.footer {
+    background-color: #0361AE;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.footer p {
+    margin: 0;
+}
