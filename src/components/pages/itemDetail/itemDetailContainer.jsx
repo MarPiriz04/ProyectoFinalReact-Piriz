@@ -1,6 +1,7 @@
-import { useContext, useState } from 'react';
+import { useContext, useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import products from '../../../Productos';
+import { doc, getDoc } from 'firebase/firestore';
+import { db } from '../../../firebaseConfig';
 import { CartContext } from '../../common/CartContext';
 import ItemQuantitySelector from '../../ItemQuantitySelector/ItemQuantitySelector';
 import AddItemButton from '../../AddItemButton/AddItemButton';
@@ -8,12 +9,37 @@ import AddItemButton from '../../AddItemButton/AddItemButton';
 const ItemDetailContainer = () => {
   const { id } = useParams();
   const { addItemToCart } = useContext(CartContext);
-  const product = products.find(p => p.id === parseInt(id));
+  const [product, setProduct] = useState(null);
   const [quantity, setQuantity] = useState(1); // Estado para manejar la cantidad seleccionada
 
+  useEffect(() => {
+    const fetchProduct = async () => {
+      try {
+        const productRef = doc(db, 'products', id);
+        const productSnap = await getDoc(productRef);
+        
+        if (productSnap.exists()) {
+          setProduct({ id: productSnap.id, ...productSnap.data() });
+        } else {
+          console.log('No se encontró el producto');
+        }
+      } catch (error) {
+        console.error('Error al obtener el producto:', error);
+      }
+    };
+
+    fetchProduct();
+  }, [id]);
+
   const handleAddToCart = () => {
-    addItemToCart(product, quantity); // Agrega el producto con la cantidad seleccionada
+    if (product) {
+      addItemToCart(product, quantity); // Agrega el producto con la cantidad seleccionada
+    }
   };
+
+  if (!product) {
+    return <p>Cargando producto...</p>;
+  }
 
   return (
     <div>
@@ -35,4 +61,3 @@ const ItemDetailContainer = () => {
 };
 
 export default ItemDetailContainer;
-

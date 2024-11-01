@@ -7,6 +7,7 @@ import Footer from './components/layouts/footer/Footer';
 import Checkout from './components/pages/checkOut/CheckOut';
 import { CartProvider } from './components/common/CartContext';
 import './App.css';
+import ItemList from './components/pages/itemListContainer/itemList';
 
 function App() {
   return (
@@ -18,7 +19,7 @@ function App() {
           <Route path="/category/:categoryId" element={<ItemListContainer />} />
           <Route path="/item/:id" element={<ItemDetailContainer />} />
           <Route path="/cart" element={<Cart />} />
-          <Route path="/item/:id" element={<ItemDetailContainer />} />
+          <Route path="/item/:id" element={<ItemList />} />
           <Route path="/checkout" element={<Checkout />} />
         </Routes>
         <Footer />

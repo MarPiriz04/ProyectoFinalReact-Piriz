@@ -1,7 +1,6 @@
 const products = [
   // Analgesicos
   {
-    id: 1,
     name: "Actron 600",
     description: "Analgésico y antiinflamatorio",
     category: "analgesicos",
@@ -10,7 +9,6 @@ const products = [
     image: "actron600.jpg"
   },
   {
-    id: 2,
     name: "Perifar 600",
     description: "Analgésico y antiinflamatorio",
     category: "analgesicos",
@@ -19,7 +17,6 @@ const products = [
     image: "perifar600.jpg"
   },
   {
-    id: 3,
     name: "Dolosedol 500",
     description: "Analgésico y antifebril (Paracetamol)",
     category: "analgesicos",
@@ -28,7 +25,6 @@ const products = [
     image: "dolosedol500.jpg"
   },
   {
-    id: 4,
     name: "Dolex 500",
     description: "Analgésico y antifebril (Paracetamol)",
     category: "analgesicos",
@@ -39,7 +35,6 @@ const products = [
   
   // Suplementos
   {
-    id: 5,
     name: "Colagenol C",
     description: "Ayuda en la mejora de las articulaciones",
     category: "suplementos",
@@ -48,7 +43,6 @@ const products = [
     image: "colagenolC.jpg"
   },
   {
-    id: 6,
     name: "Mega Omega 3",
     description: "Prevención y protección cardiovascular, neurológica y articular",
     category: "suplementos",
@@ -57,7 +51,6 @@ const products = [
     image: "megaOmega3.jpg"
   },
   {
-    id: 7,
     name: "Citrato de Magnesio",
     description: "Mejora la digestión, salud ósea y muscular, y apoya la función cardiovascular",
     category: "suplementos",
@@ -66,7 +59,6 @@ const products = [
     image: "citratoMagnesio.jpg"
   },
   {
-    id: 8,
     name: "Harina de Orujo",
     description: "Actúa contra el envejecimiento celular y varias enfermedades",
     category: "suplementos",
@@ -77,77 +69,69 @@ const products = [
 
   // Productos de Higiene
   {
-    id: 9,
-    name: "",
+    name: "Pantene 3min",
     description: "",
     category: "higiene",
-    price: 0,
-    stock: 0,
+    price: 320,
+    stock: 10,
     image: ""
   },
   {
-    id: 10,
-    name: "",
+    name: "colgate total 12 ",
     description: "",
     category: "higiene",
-    price: 0,
-    stock: 0,
+    price: 230,
+    stock: 10,
     image: ""
   },
   {
-    id: 11,
-    name: "",
+    name: "dove aero clasic",
     description: "",
     category: "higiene",
-    price: 0,
-    stock: 0,
+    price: 199,
+    stock: 10,
     image: ""
   },
   {
-    id: 12,
-    name: "",
+    name: "sublime d/h x12",
     description: "",
     category: "higiene",
-    price: 0,
-    stock: 0,
+    price: 199,
+    stock: 10,
     image: ""
   },
 
   // Anticonceptivos
   {
-    id: 13,
-    name: "",
+    name: "yasmin",
     description: "",
     category: "anticonceptivos",
-    price: 0,
-    stock: 0,
+    price: 500,
+    stock: 10,
     image: ""
   },
   {
-    id: 14,
-    name: "",
+    name: "slinda",
     description: "",
     category: "anticonceptivos",
-    price: 0,
-    stock: 0,
+    price: 500,
+    stock: 10,
     image: ""
   },
   {
-    id: 15,
-    name: "",
+    name: "divina 28",
     description: "",
     category: "anticonceptivos",
-    price: 0,
-    stock: 0,
+    price: 500,
+    stock: 10,
     image: ""
   },
   {
-    id: 16,
-    name: "",
+    name: "divina 21",
     description: "",
     category: "anticonceptivos",
-    price: 0,
-    stock: 0,
+    price: 500,
+    stock: 10,
     image: ""
   }
 ];
