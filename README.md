@@ -26,7 +26,7 @@ Clonar el repositorio :
 
 
 Copiar código
-git clone https://github.com/tu-usuario/tu-repositorio.git
+git clone https://github.com/MarPiriz04/ProyectoFinalReact-Piriz
 cd tu-repositorio
 Instalar las dependencias :
 
@@ -45,12 +45,12 @@ import { initializeApp } from 'firebase/app';
 import { getFirestore } from 'firebase/firestore';
 
 const firebaseConfig = {
-  apiKey: "TU_API_KEY",
-  authDomain: "TU_AUTH_DOMAIN",
-  projectId: "TU_PROJECT_ID",
-  storageBucket: "TU_STORAGE_BUCKET",
-  messagingSenderId: "TU_MESSAGING_SENDER_ID",
-  appId: "TU_APP_ID"
+    apiKey: "999",
+    authDomain: 999",
+    projectId: "p9z99",
+    storageBucket: "999",
+    messagingSenderId: "999",
+    appId: "''''''"
 };
 
 const app = initializeApp(firebaseConfig);

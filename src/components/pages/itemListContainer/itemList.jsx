@@ -22,7 +22,7 @@ const ItemList = ({ products, addToCart }) => {
 ItemList.propTypes = {
     products: PropTypes.arrayOf(
         PropTypes.shape({
-            id: PropTypes.number.isRequired,
+            id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired, // Acepta tanto string como number
             name: PropTypes.string.isRequired,
             price: PropTypes.number.isRequired,
             stock: PropTypes.number.isRequired,
@@ -34,3 +34,4 @@ ItemList.propTypes = {
 };
 
 export default ItemList;
+

@@ -6,7 +6,9 @@ import { collection, getDocs, query, where } from 'firebase/firestore';
 import { db } from '../../../firebaseConfig';
 import { CartContext } from '../../common/CartContext';
 
-const ItemListContainer = ({ greeting }) => {
+const ItemListContainer = ({ greeting }) => { 
+<ItemListContainer greeting="Bienvenidos a nuestra tienda" />
+
   const { categoryId } = useParams();
   const [filteredProducts, setFilteredProducts] = useState([]);
   const { addItemToCart } = useContext(CartContext);

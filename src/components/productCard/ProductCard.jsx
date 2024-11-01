@@ -19,10 +19,10 @@ const ProductCard = ({ product }) => {
             <p>${product.price}</p>
 
             {/* Selector de Cantidad */}
-            <ItemQuantitySelector 
-                quantity={quantity} 
-                setQuantity={setQuantity} 
-                maxStock={product.stock} 
+            <ItemQuantitySelector
+                quantity={quantity}
+                setQuantity={setQuantity}
+                maxStock={product.stock}
             />
 
             {/* Botón de Agregar al Carrito */}
@@ -35,13 +35,12 @@ const ProductCard = ({ product }) => {
 
 ProductCard.propTypes = {
     product: PropTypes.shape({
-        id: PropTypes.number.isRequired,
+        id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
         name: PropTypes.string.isRequired,
+        image: PropTypes.string.isRequired,
         price: PropTypes.number.isRequired,
         stock: PropTypes.number.isRequired,
-        image: PropTypes.string
     }).isRequired,
 };
-
 export default ProductCard;
 
