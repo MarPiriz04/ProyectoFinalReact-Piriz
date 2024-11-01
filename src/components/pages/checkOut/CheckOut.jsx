@@ -5,10 +5,9 @@ import { db } from '../../../firebaseConfig';
 import Swal from 'sweetalert2';
 
 const Checkout = ({ cartItems, onConfirmPurchase }) => {
-    // Calcular el total de la compra
+
     const total = cartItems.reduce((acc, item) => acc + item.price * item.quantity, 0);
 
-    // Manejar la confirmación de la compra y el guardado en Firestore
     const handleConfirmPurchase = async () => {
         const order = {
             items: cartItems.map(item => ({
@@ -30,7 +29,7 @@ const Checkout = ({ cartItems, onConfirmPurchase }) => {
                 confirmButtonText: 'Aceptar',
             });
 
-            
+            // Llama a onConfirmPurchase para limpiar el carrito si está definida
             if (onConfirmPurchase) {
                 onConfirmPurchase();
             }
@@ -79,7 +78,8 @@ Checkout.propTypes = {
             quantity: PropTypes.number.isRequired,
         })
     ).isRequired,
-    onConfirmPurchase: PropTypes.func, 
+    onConfirmPurchase: PropTypes.func, // Hacer opcional onConfirmPurchase
 };
 
 export default Checkout;
+
