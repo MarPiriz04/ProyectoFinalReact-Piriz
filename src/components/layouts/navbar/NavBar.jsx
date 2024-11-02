@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom';
 import CartWidget from '../../common/cartWidget/CartWidget';
-import './NavBar.css';
 
 const NavBar = () => (
     <nav className="navbar">
