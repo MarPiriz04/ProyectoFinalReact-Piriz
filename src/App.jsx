@@ -1,11 +1,11 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { useContext } from 'react';
-import NavBar from './components/layouts/navbar/NavBar';
 import ItemListContainer from './components/pages/itemListContainer/itemListContainer';
 import ItemDetailContainer from './components/pages/itemDetail/itemDetailContainer';
 import Cart from './components/pages/Cart/Cart';
 import Footer from './components/layouts/footer/Footer';
 import Checkout from './components/pages/checkOut/CheckOut';
+import NavBar from './components/layouts/navbar/NavBar';
 import { CartProvider, CartContext } from './components/common/CartContext';
 import './App.css';
 
